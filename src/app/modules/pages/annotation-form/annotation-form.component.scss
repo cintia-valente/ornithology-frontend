@@ -1,0 +1,27 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+
+.annotation {
+    text-align: center;
+    background-image: url('/assets/img/fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    right: 0;
+    text-align: center;
+    top: 0;
+    height: 46rem;
+
+    @include media-breakpoint-up(md) {
+        height: 67rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        height: 33rem;
+    }
+
+}

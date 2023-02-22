@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BirdComponent Dado: que o componente foi carregado
+      Quando: detectar as alterações
+      Então: deve gerar um Snapshot do componente carregado 1`] = `
+<app-bird
+  __ngContext__={[Function Number]}
+  birdService={[Function BirdServiceMock]}
+  birds={[Function Array]}
+  birdsDisplayed={[Function Array]}
+  error="false"
+  sanitizer={[Function DomSanitizerImpl]}
+  toastr={[Function ToastrServiceMock]}
+>
+  <app-nav-bar /><div
+    class="birds"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-md-1"
+        >
+          <div
+            class="title"
+          >
+            Aves
+          </div>
+        </div>
+        <div
+          class="col-md-1"
+        >
+          <div
+            class="image"
+          >
+            <img
+              src="assets/img/logo3.png"
+              style="width: 70px;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="search-container"
+      >
+        <form>
+          <div
+            class="form-group"
+          >
+            <input
+              class="form-control"
+              placeholder="Buscar"
+              type="text"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-md-3"
+        >
+          <a
+            class="nav-item nav-link"
+            href="/cadastrar/Arara"
+          >
+            <div
+              class="card"
+            >
+              <div
+                class="card-body"
+              >
+                <div
+                  class="bird-namePtbr"
+                >
+                   Arara 
+                </div>
+                <div
+                  class="bird-nameEnglish"
+                >
+                   Blue-and-yellow Macaw 
+                </div>
+                <div
+                  class="bird-nameLatin"
+                >
+                   Arara 
+                </div>
+                <div
+                  class="bird-size"
+                >
+                   90 cm 
+                </div>
+                <div
+                  class="bird-genre"
+                >
+                   Can 
+                </div>
+                <div
+                  class="bird-color"
+                >
+                   Amarelo 
+                </div>
+                <div
+                  class="bird-family"
+                >
+                   Psittacidae 
+                </div>
+                <div
+                  class="bird-habitat"
+                >
+                   Floresta 
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-bird>
+`;

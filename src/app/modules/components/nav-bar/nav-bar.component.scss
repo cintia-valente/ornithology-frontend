@@ -1,0 +1,36 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import "/src/app/scss/variables.scss";
+
+.navbar-custom {
+  background: -webkit-linear-gradient(60deg, $chocolate, $nav-center, $chocolate);
+
+  .navbar-brand {
+
+    @include media-breakpoint-up(md) {
+      margin-left: 3rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 3rem;
+    }
+  }
+
+  .navbar-collapse {
+
+    @include media-breakpoint-up(md) {
+      margin-left: 36rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 36rem;
+    }
+  }
+
+  .navbar-nav {
+    font-style: italic;
+    font-size: larger;
+
+  }
+}

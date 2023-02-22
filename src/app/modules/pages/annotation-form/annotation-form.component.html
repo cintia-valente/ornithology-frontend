@@ -1,0 +1,74 @@
+<app-nav-bar></app-nav-bar>
+<div class="annotation">
+  <div class="container">
+    <div class="section-title">Anotações</div>
+    <div class="row justify-content-center">
+      <div class="col-xl-7">
+        <form [formGroup]="annotationForm">
+          <div class="row">
+            <div class="col-md-12 offset-md-2">
+              <div class="form">
+                <div class="form-area">
+                  <div class="form-group">
+                    <label for="inputBird">Ave*: </label>
+                    <select class="form-control" (click)="onChangeBird($event)">
+                      <option value="" selected>Selecione...</option>
+                      <option
+                        *ngFor="let bird of birds"
+                        [value]="bird.namePtbr"
+                        [selected]="
+                          bird.namePtbr === annotationForm.value.bird.namePtbr
+                        "
+                      >
+                        {{ bird.namePtbr }}
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputData">Data:</label>
+                    <input
+                      type="datetime-local"
+                      class="form-control"
+                      formControlName="date"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputNome">Local*:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="place"
+                      placeholder="Local"
+                    />
+                    <div
+                      class="invalid-field"
+                      *ngIf="
+                        annotationForm.controls.place.invalid &&
+                        annotationForm.controls.place.touched
+                      "
+                    >
+                      Campo obrigatório. Por favor, informe um local.
+                    </div>
+                  </div>
+                  <div class="button-register-edit">
+                    <button
+                      type="submit"
+                      class="btn btn-danger"
+                      (click)="onSubmit()"
+                      [disabled]="!annotationForm.valid"
+                    >
+                      {{ isEdit ? "Alterar" : "Salvar" }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

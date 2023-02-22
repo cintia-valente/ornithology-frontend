@@ -1,0 +1,58 @@
+<app-nav-bar></app-nav-bar>
+<div class="annotations">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-8">
+        <div class="section-title">Anotações</div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Ave</th>
+              <th>Data e Hora</th>
+              <th>Local</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let annotation of annotations">
+              <td class="py-1">
+                {{ annotation.bird.namePtbr }}
+              </td>
+              <td class="py-1">
+                {{ annotation.date | date : "dd/MM/yy HH:mm" }}
+              </td>
+              <td class="py-1">
+                {{ annotation.place }}
+              </td>
+
+              <td class="py-1">
+                <div class="table-actions">
+                  <span class="icon-delete">
+                    <img
+                      src="assets/svg/layout/trash-solid.svg"
+                      (click)="deleteAnnotation(annotation)"
+                    />
+                  </span>
+                  <span class="icon-edit">
+                    <a
+                      [routerLink]="[
+                        '/editar-anotacoes',
+                        annotation.idAnnotation
+                      ]"
+                    >
+                      <img
+                        src="assets/svg/layout/pen-solid.svg"
+                        style="width: 17px"
+                      />
+                    </a>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

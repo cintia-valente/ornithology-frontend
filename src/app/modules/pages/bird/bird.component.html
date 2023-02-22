@@ -1,0 +1,67 @@
+<app-nav-bar></app-nav-bar>
+<div class="birds">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+        <div class="title">Aves</div>
+      </div>
+
+      <div class="col-md-1">
+        <div class="image">
+          <img src="assets/img/logo3.png" style="width: 70px" />
+        </div>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <form>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Buscar"
+            (input)="search($event)"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let bird of birds">
+        <a
+          class="nav-item nav-link"
+          [routerLink]="['../cadastrar/', bird.namePtbr]"
+        >
+          <div class="card">
+            <div class="card-body">
+              <img [src]="bird.picByte" *ngIf="bird.imageId" />
+              <div class="bird-namePtbr">
+                {{ bird.namePtbr }}
+              </div>
+              <div class="bird-nameEnglish">
+                {{ bird.nameEnglish }}
+              </div>
+              <div class="bird-nameLatin">
+                {{ bird.namePtbr }}
+              </div>
+              <div class="bird-size">
+                {{ bird.size }}
+              </div>
+              <div class="bird-genre">
+                {{ bird.genre }}
+              </div>
+              <div class="bird-color">
+                {{ bird.color }}
+              </div>
+              <div class="bird-family">
+                {{ bird.family }}
+              </div>
+              <div class="bird-habitat">
+                {{ bird.habitat }}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

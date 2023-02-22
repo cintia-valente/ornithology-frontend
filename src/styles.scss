@@ -1,0 +1,141 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import "/src/app/scss/variables.scss";
+@import "ngx-toastr/toastr";
+
+.container {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+
+    .form {
+        margin-left: 3rem;
+
+        @include media-breakpoint-up(md) {
+            margin-left: 0rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-left: 0rem;
+        }
+
+        .form-area {
+            display: grid;
+            grid-auto-columns: 25rem;
+
+
+            @include media-breakpoint-up(md) {
+                display: grid;
+                grid-auto-columns: 41rem;
+            }
+
+            @include media-breakpoint-up(xl) {
+                display: grid;
+                grid-auto-columns: 41rem;
+            }
+
+            .form-group {
+                width: 65%;
+                margin-bottom: 2rem;
+                
+                label {
+                    font-weight: 600;
+                    color: $white;
+            
+                    @include media-breakpoint-up(md) {
+                        color: $white;
+                    }
+                
+                    @include media-breakpoint-up(xl) {
+                        color: $black;
+                    }
+                }
+    
+                .invalid-field {
+                    color: $red-valid;
+                    padding-top: 0.2rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .table {
+        margin-top: 2rem;
+    }
+    
+    .table-actions {
+        text-align: center;
+    
+        .icon-delete {
+            margin-left: 0rem;
+            float: left;
+    
+            img {
+                width: 17px;
+    
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .section-title {
+        font-size: 30px;
+        margin-top: 9px;
+        font-style: italic;
+        font-weight: 500px;
+        color: $white;
+        margin-bottom: inherit;
+        
+
+        @include media-breakpoint-up(md) {
+            color: $white;
+        }
+    
+        @include media-breakpoint-up(xl) {
+            color: $black;
+        }
+    }
+
+    .search-container {
+        margin: inherit;
+    }
+
+    // .form {
+    //     min-height: 22rem;
+
+    //     margin-left: 3rem;
+
+    //     @include media-breakpoint-up(md) {
+    //         margin-left: 0rem;
+    //     }
+
+    //     @include media-breakpoint-up(xl) {
+    //         margin-left: 0rem;
+    //     }
+       
+    // }
+
+    .button-register-edit {
+        margin-right: 9rem;
+        margin-top: 1rem;
+    
+        @include media-breakpoint-up(md) {
+            display: flex;
+            margin-left: 7rem;
+        }
+    
+        @include media-breakpoint-up(xl) {
+            display: flex;
+            margin-left: 7rem;
+        }
+
+        .btn {
+            padding: 0.45rem 1.25rem;
+            width: 200px;
+
+        }
+    }
+}

@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnnotationListComponent Dado: que o componente foi carregado
+      Quando: detectar as alterações
+      Então: deve gerar um Snapshot do componente carregado 1`] = `
+<app-annotation-list
+  __ngContext__={[Function Number]}
+  annotationForm={[Function FormGroup]}
+  annotationService={[Function AnnotationServiceMock]}
+  annotations={[Function Array]}
+  birds={[Function Array]}
+  error="false"
+  formBuilder={[Function FormBuilder]}
+  toastr={[Function ToastrServiceMock]}
+>
+  <app-nav-bar /><div
+    class="annotations"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="row justify-content-center"
+      >
+        <div
+          class="col-xl-8"
+        >
+          <div
+            class="section-title"
+          >
+            Anotações
+          </div>
+          <table
+            class="table table-striped"
+          >
+            <thead>
+              <tr>
+                <th>
+                  Ave
+                </th>
+                <th>
+                  Data e Hora
+                </th>
+                <th>
+                  Local
+                </th>
+                <th>
+                  Ações
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="py-1"
+                >
+                   Canário 
+                </td>
+                <td
+                  class="py-1"
+                >
+                   01/01/22 12:00 
+                </td>
+                <td
+                  class="py-1"
+                >
+                   Porto Alegre 
+                </td>
+                <td
+                  class="py-1"
+                >
+                  <div
+                    class="table-actions"
+                  >
+                    <span
+                      class="icon-delete"
+                    >
+                      <img
+                        src="assets/svg/layout/trash-solid.svg"
+                      />
+                    </span>
+                    <span
+                      class="icon-edit"
+                    >
+                      <a
+                        href="/editar-anotacoes/138"
+                      >
+                        <img
+                          src="assets/svg/layout/pen-solid.svg"
+                          style="width: 17px;"
+                        />
+                      </a>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-annotation-list>
+`;
