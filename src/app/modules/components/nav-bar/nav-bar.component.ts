@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { AuthService } from './../../../core/auth/auth.service';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,8 +9,14 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
   show: boolean = false;
+  isLoggedIn: boolean = this.authService.isLoggedIn();
 
-  constructor() {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {}
+
+  onLogout() {
+    this.authService.logout();
+    this.router.navigate(['/']);
+  }
 }

@@ -43,6 +43,10 @@
       <li class="nav-item active">
         <a class="nav-link" [routerLink]="['/aves']">Catálogo de Aves</a>
       </li>
+
+      <li class="nav-item active" *ngIf="isLoggedIn">
+        <a class="nav-link" href="#" (click)="onLogout()">Sair</a>
+      </li>
     </ul>
   </div>
 </nav>

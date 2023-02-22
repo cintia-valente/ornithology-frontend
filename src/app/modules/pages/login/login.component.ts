@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   login = false;
-  // @ViewChild('userNameInput') userNameInput!: ElementRef<HTMLInputElement>;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -34,8 +33,6 @@ export class LoginComponent implements OnInit {
         (error: any) => {
           console.log(error);
           this.loginForm.reset();
-
-          console.log('Login inválido');
         };
       });
   }

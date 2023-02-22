@@ -40,10 +40,20 @@ export class AuthService {
       .post<LoginResponse>(this.API, { login: login, password: password })
       .pipe(
         map((response) => {
-          localStorage.setItem('token', response.token);
-          localStorage.setItem('name', response.name);
+          if (response.token) {
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('name', response.name);
+          }
           return response;
         })
       );
+  }
+  logout(): void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('name');
+  }
+
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('token');
   }
 }
