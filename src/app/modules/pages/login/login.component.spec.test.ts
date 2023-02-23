@@ -84,7 +84,7 @@ describe('LoginComponent', () => {
 
   it(`Dado: que o componente foi carregado
       Quando: preencher o formulário
-      E: clicar no botão salvar
+      E: clicar no botão entrar
       Então: deve chamar o serviço authService.login e redirecionar para a rota /aves`, async () => {
     //Arrange
     const spyLogin = jest
@@ -128,7 +128,7 @@ describe('LoginComponent', () => {
 
   it(`Dado: que o componente foi carregado
       Quando: atribuir um erro no serviço 
-      E: clicar no botão salvar
+      E: clicar no botão entrar
       Então: deve chamar o serviço authService.login e toastrService.error`, async () => {
     //Arrange
     const errorMessage = {
