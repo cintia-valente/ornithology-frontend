@@ -52,7 +52,6 @@ export class BirdComponent implements OnInit {
   }
 
   listFiles() {
-    //debugger;
     this.birds.forEach((bird) => {
       if (bird.imageId) {
         this.fileService
