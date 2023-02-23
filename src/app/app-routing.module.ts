@@ -21,6 +21,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'cadastrar',
+    component: AnnotationFormComponent,
+    canActivate: [AuthGuard],
+  },
+  {
     path: 'cadastrar/:birdName',
     component: AnnotationFormComponent,
     canActivate: [AuthGuard],
