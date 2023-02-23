@@ -32,6 +32,7 @@ const mockAnnotations = {
     color: 'Amarelo',
     family: 'Psittacidae',
     habitat: 'Floresta',
+    picByte: 'teste',
   },
   date: new Date('2022-01-01T12:00:00'),
   place: 'Porto Alegre',
@@ -113,65 +114,4 @@ describe('AnnotationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  // it(`Dado: que o componente foi carregado
-  //     Quando: preencher o formulário
-  //     E: clicar no botão salvar
-  //     Então: deve chamar os serviços annotationService.postAnnotations e toastrService.sucess`, async () => {
-  //   //Arrange
-  //   const spyAnotations = jest
-  //     .spyOn(annotationService, 'postAnnotations')
-  //     .mockReturnValue(of(mockAnnotations));
-
-  //   const spySuccess = jest
-  //     .spyOn(toastrService, 'success')
-  //     .mockReturnValue({} as any);
-
-  //   fixture.detectChanges();
-  //   await fixture.whenStable();
-
-  //   const selectBird = fixture.nativeElement.querySelector(
-  //     '.annotation > div > div.row.justify-content-center > div > form > div > div > div > div > div:nth-child(1) > select'
-  //   );
-
-  //   //Act
-  //   selectBird.click();
-
-  //   fixture.detectChanges();
-
-  //   const birdOption = fixture.nativeElement.querySelector(
-  //     '.annotation > div > div.row.justify-content-center > div > form > div > div > div > div > div:nth-child(1) > select > option:nth-child(2)'
-  //   );
-
-  //   birdOption.click();
-
-  //   fixture.detectChanges();
-  //   await fixture.whenStable();
-
-  //   const valueInputDate = fixture.nativeElement.querySelector(
-  //     '.annotation .row.justify-content-center form div:nth-child(2) > input'
-  //   );
-
-  //   valueInputDate.value = '2022-01-01T12:00:00';
-
-  //   valueInputDate.dispatchEvent(new Event('input'));
-
-  //   const valueInputLabel = fixture.nativeElement.querySelector(
-  //     '.annotation .row.justify-content-center form div:nth-child(3) > input'
-  //   );
-
-  //   valueInputLabel.value = 'TESTE';
-
-  //   valueInputLabel.dispatchEvent(new Event('input'));
-
-  //   const button = fixture.nativeElement.querySelector(
-  //     '.annotation .row.justify-content-center form .button-register-edit > button'
-  //   );
-
-  //   button.click();
-
-  //   //Assert
-  //   expect(spyAnotations).toHaveBeenCalled();
-  //   expect(spySuccess).toHaveBeenCalled();
-  // });
 });

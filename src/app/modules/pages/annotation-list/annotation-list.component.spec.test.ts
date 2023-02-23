@@ -22,7 +22,7 @@ const mockAnnotations = [
     idAnnotation: '138',
     bird: {
       id: '28',
-      image: 'img',
+      imageId: 'img',
       namePtbr: 'Canário',
       nameEnglish: 'Blue-and-yellow Macaw',
       nameLatin: 'Ara ararauna',
@@ -31,11 +31,18 @@ const mockAnnotations = [
       color: 'Amarelo',
       family: 'Psittacidae',
       habitat: 'Floresta',
+      picByte: 'teste',
     },
     date: new Date('2022-01-01T12:00:00'),
     place: 'Porto Alegre',
   },
 ];
+
+const errorMessage = {
+  error: 'error',
+  status: 400,
+  message: 'Server Error',
+};
 
 class AnnotationServiceMock {
   getAnnotations(): any {
@@ -110,7 +117,7 @@ describe('AnnotationListComponent', () => {
   });
 
   it(`Dado: que o componente foi carregado
-      Então: deve chamar o serviço userService.getUsers`, async () => {
+      Então: deve chamar o serviço annotationService.getAnnotations`, async () => {
     //Arrange
     const spyAnnotationList = jest
       .spyOn(annotationService, 'getAnnotations')
@@ -125,17 +132,11 @@ describe('AnnotationListComponent', () => {
 
   it(`Dado: que o componente foi carregado
       Quando: ocorrer um erro ao carregar as anotações 
-      Então: deve chamar o serviço userService.getUsers`, async () => {
+      Então: deve chamar o serviço annotationService.getAnnotations`, async () => {
     //Arrange
-    const error = {
-      error: 'error',
-      status: 400,
-      message: 'Server Error',
-    };
-
     const spyAnnotationListError = jest
       .spyOn(annotationService, 'getAnnotations')
-      .mockReturnValue(throwError(() => error.message));
+      .mockReturnValue(throwError(() => errorMessage));
 
     //Act
     fixture.detectChanges();
@@ -161,6 +162,7 @@ describe('AnnotationListComponent', () => {
         color: 'Amarelo',
         family: 'Psittacidae',
         habitat: 'Floresta',
+        picByte: 'teste',
       },
       date: new Date('2022-01-01T12:00:00'),
       place: 'Porto Alegre',
@@ -190,17 +192,15 @@ describe('AnnotationListComponent', () => {
   it(`Dado: que o componente foi carregado
       Quando: atribuir um erro no serviço 
       E: clicar no ícone de deletar
-      Então: deve chamar o serviço userService.deleteUser`, async () => {
+      Então: deve chamar o serviço userService.deleteUser e toastrService.error`, async () => {
     //Arrange
-    const error = {
-      error: 'error',
-      status: 400,
-      message: 'Server Error',
-    };
-
     const spyAnnotationDeleteError = jest
       .spyOn(annotationService, 'deleteAnnotations')
-      .mockReturnValue(throwError(() => error.message));
+      .mockReturnValue(throwError(() => errorMessage));
+
+    const spyToastDeleteError = jest
+      .spyOn(toastrService, 'error')
+      .mockReturnValue({} as any);
 
     //Act
     fixture.detectChanges();
@@ -217,6 +217,7 @@ describe('AnnotationListComponent', () => {
 
     //Assert
     expect(spyAnnotationDeleteError).toHaveBeenCalled();
+    expect(spyToastDeleteError).toHaveBeenCalled();
   });
 
   it(`Dado: que o componente foi carregado

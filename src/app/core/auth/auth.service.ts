@@ -44,10 +44,12 @@ export class AuthService {
             localStorage.setItem('token', response.token);
             localStorage.setItem('name', response.name);
           }
+
           return response;
         })
       );
   }
+
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('name');

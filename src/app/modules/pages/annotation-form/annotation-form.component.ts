@@ -34,7 +34,7 @@ export class AnnotationFormComponent implements OnInit {
       bird: this.formBuilder.group({
         id: [''],
         image: [null],
-        namePtbr: [''],
+        namePtbr: ['', Validators.required],
         nameEnglish: [''],
         nameLatin: [''],
         size: [''],

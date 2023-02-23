@@ -9,6 +9,7 @@ exports[`BirdComponent Dado: que o componente foi carregado
   birds={[Function Array]}
   birdsDisplayed={[Function Array]}
   error="false"
+  fileService={[Function FileService]}
   sanitizer={[Function DomSanitizerImpl]}
   toastr={[Function ToastrServiceMock]}
 >

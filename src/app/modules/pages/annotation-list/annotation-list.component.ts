@@ -66,6 +66,7 @@ export class AnnotationListComponent {
           this.listAnnotations();
           this.toastr.error('Excluída com sucesso.');
         },
+
         error: (err: HttpErrorResponse) => {
           this.toastr.error(
             'Erro ao excluir anotação. Por favor, tente novamente mais tarde.'

@@ -11,7 +11,7 @@ import { Routes } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
-import { of } from 'rxjs';
+import { of, throwError } from 'rxjs';
 
 import { BirdService } from '../../../services/bird.service';
 
@@ -29,6 +29,7 @@ const mockBirds = [
     color: 'Amarelo',
     family: 'Psittacidae',
     habitat: 'Floresta',
+    picByte: 'teste',
   },
 ];
 
@@ -39,8 +40,6 @@ class BirdServiceMock {
 }
 
 class ToastrServiceMock {
-  success(message?: string) {}
-
   error(message?: string) {}
 }
 
@@ -104,6 +103,28 @@ describe('BirdComponent', () => {
 
     //Assert
     expect(spyUserList).toHaveBeenCalled();
+  });
+
+  it(`Dado: que o componente foi carregado
+      Quando: atribuir um erro no serviço 
+      Então: deve chamar o serviço birdService.getBirds`, async () => {
+    //Arrange
+    const errorMessage = {
+      error: 'error',
+      status: 400,
+      message: 'Server Error',
+    };
+
+    const spyBirdError = jest
+      .spyOn(birdService, 'getBirds')
+      .mockReturnValue(throwError(() => errorMessage));
+
+    //Act
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    //Assert
+    expect(spyBirdError).toHaveBeenCalled();
   });
 
   it(`Dado: que o componente foi carregado

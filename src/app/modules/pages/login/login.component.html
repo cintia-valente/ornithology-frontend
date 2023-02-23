@@ -17,6 +17,15 @@
                       id="login"
                       placeholder="nome@email.com"
                     />
+                    <div
+                      class="invalid-field"
+                      *ngIf="
+                        loginForm.controls.login.invalid &&
+                        loginForm.controls.login.touched
+                      "
+                    >
+                      Por favor, informe um email válido.
+                    </div>
                   </div>
 
                   <div class="form-group">
@@ -27,6 +36,15 @@
                       formControlName="password"
                       id="password"
                     />
+                    <div
+                      class="invalid-field"
+                      *ngIf="
+                        loginForm.controls.password.invalid &&
+                        loginForm.controls.password.touched
+                      "
+                    >
+                      Por favor, informe uma senha válida.
+                    </div>
                   </div>
 
                   <div class="button-register-edit">
