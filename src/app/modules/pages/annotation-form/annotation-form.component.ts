@@ -21,7 +21,6 @@ export class AnnotationFormComponent implements OnInit {
   error: boolean = false;
   loading: boolean = false;
   isEdit: boolean = false;
-  //  annotations: any;
 
   constructor(
     private formBuilder: FormBuilder,
