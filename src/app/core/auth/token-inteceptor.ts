@@ -13,7 +13,7 @@ export class TokenInterceptor implements HttpInterceptor {
   constructor(private authService: AuthService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler) {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem(KEY);
     if (this.authService.isAuthenticated()) {
       request = request.clone({
         setHeaders: {

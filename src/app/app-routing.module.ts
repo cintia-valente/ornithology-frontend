@@ -1,10 +1,11 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { BirdComponent } from './modules/pages/bird/bird.component';
-import { AnnotationFormComponent } from './modules/pages/annotation-form/annotation-form.component';
-import { AnnotationListComponent } from './modules/pages/annotation-list/annotation-list.component';
 import { LoginComponent } from './modules/pages/login/login.component';
+import { BirdComponent } from './modules/pages/bird/bird.component';
+import { AnnotationListComponent } from './modules/pages/annotation-list/annotation-list.component';
+import { AnnotationFormComponent } from './modules/pages/annotation-form/annotation-form.component';
+
 import { AuthGuard } from './core/auth/auth.guard';
 
 const routes: Routes = [
