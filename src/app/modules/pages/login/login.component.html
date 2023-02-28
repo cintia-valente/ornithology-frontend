@@ -16,6 +16,7 @@
                       formControlName="login"
                       id="login"
                       placeholder="nome@email.com"
+                      data-cy="login"
                     />
                     <div
                       class="invalid-field"
@@ -35,6 +36,7 @@
                       class="form-control"
                       formControlName="password"
                       id="password"
+                      data-cy="password"
                     />
                     <div
                       class="invalid-field"
@@ -48,7 +50,13 @@
                   </div>
 
                   <div class="button-register-edit">
-                    <button type="submit" class="btn btn-danger">Entrar</button>
+                    <button
+                      type="submit"
+                      class="btn btn-danger"
+                      data-cy="submit"
+                    >
+                      Entrar
+                    </button>
                   </div>
                 </div>
               </div>

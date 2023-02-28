@@ -31,6 +31,7 @@
                       type="datetime-local"
                       class="form-control"
                       formControlName="date"
+                      data-cy="date"
                       required
                     />
                     <div
@@ -50,6 +51,7 @@
                       type="text"
                       class="form-control"
                       formControlName="place"
+                      data-cy="place"
                       placeholder="Local"
                     />
                     <div
@@ -68,6 +70,7 @@
                       class="btn btn-danger"
                       (click)="onSubmit()"
                       [disabled]="!annotationForm.valid"
+                      data-cy="submit"
                     >
                       {{ isEdit ? "Alterar" : "Salvar" }}
                     </button>

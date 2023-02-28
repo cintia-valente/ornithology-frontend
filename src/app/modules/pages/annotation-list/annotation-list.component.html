@@ -32,6 +32,7 @@
                     <img
                       src="assets/svg/layout/trash-solid.svg"
                       (click)="deleteAnnotation(annotation)"
+                      data-cy="delete"
                     />
                   </span>
                   <span class="icon-edit">
@@ -40,6 +41,7 @@
                         '/editar-anotacoes',
                         annotation.idAnnotation
                       ]"
+                      data-cy="edit"
                     >
                       <img
                         src="assets/svg/layout/pen-solid.svg"
