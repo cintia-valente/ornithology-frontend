@@ -53,9 +53,9 @@ describe('Validate Tests', () => {
   it('Deve efetuar lougout ', () => {
     cy.visit('localhost:4200');
 
-    cy.get('#login').type('maite@email.com');
+    cy.get('[data-cy=login]').type('maite@email.com');
 
-    cy.get('#password').type('1234');
+    cy.get('[data-cy=password]').type('1234');
 
     cy.get('[data-cy=submit]').click();
 
