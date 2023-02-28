@@ -46,6 +46,8 @@ describe('Validate Tests', () => {
     cy.get('[data-cy="place"]').type('Porto Alegre');
 
     cy.get('[data-cy=submit]').click({ force: true });
+
+    cy.viewport(1200, 620);
   });
 
   it('Deve efetuar lougout ', () => {
