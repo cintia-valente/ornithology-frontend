@@ -1,6 +1,6 @@
 import { FileService } from './../../../services/file.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SecurityContext } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
 import { throwError } from 'rxjs';
@@ -54,14 +54,16 @@ export class BirdComponent implements OnInit {
   listFiles() {
     //debugger;
     this.birds.forEach((bird) => {
+      console.log("bird.imageId", bird.imageId)
       if (bird.imageId) {
         this.fileService
-          .getFiles(bird.imageId, { responseType: 'blob' })
-          .subscribe((data) => {
-            if (data) {
-              bird.picByte = URL.createObjectURL(data);
-            }
-          });
+        .download(bird.imageId)
+        .subscribe(blob =>{
+          console.log(blob)
+          let objectURL = `data:${blob.contentType}/png;base64,` + blob.picByte;
+
+          bird.picByte = this.sanitizer.sanitize(SecurityContext.RESOURCE_URL, this.sanitizer.bypassSecurityTrustResourceUrl(objectURL)) || undefined;
+        });
       }
     });
   }

@@ -9,5 +9,5 @@ export interface Bird {
   color: string;
   family: string;
   habitat: string;
-  picByte: string;
+  picByte?: string;
 }
