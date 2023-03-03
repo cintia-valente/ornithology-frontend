@@ -2,7 +2,6 @@
 @import 'node_modules/bootstrap/scss/variables';
 @import 'node_modules/bootstrap/scss/mixins';
 
-
 .annotation {
     text-align: center;
     background-image: url('/assets/img/fundo.png');
@@ -14,8 +13,9 @@
     right: 0;
     text-align: center;
     top: 0;
-    height: 46rem;
-
+    width: 100vw;
+    height: 100vh;
+   
     @include media-breakpoint-up(md) {
         height: 67rem;
     }
