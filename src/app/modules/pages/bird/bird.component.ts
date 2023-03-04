@@ -16,7 +16,7 @@ export class BirdComponent implements OnInit {
   birds: Bird[] = [];
   birdsDisplayed: Bird[] = [];
   error: boolean = false;
-  showFullContent: boolean = false;
+  showContent: boolean = false;
   imageUrl: any;
 
   constructor(
@@ -77,7 +77,7 @@ export class BirdComponent implements OnInit {
     );
   }
 
-  showMore() {
-    this.showFullContent = !this.showFullContent;
+  showMore(bird: Bird) {
+    bird.showContent = !bird.showContent;
   }
 }

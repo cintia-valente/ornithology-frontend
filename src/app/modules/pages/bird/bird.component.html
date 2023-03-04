@@ -52,7 +52,7 @@
               <div class="bird-field">{{ bird.nameLatin }}</div>
             </div>
 
-            <div *ngIf="showFullContent">
+            <div *ngIf="bird.showContent">
               <div class="field">
                 <b>Tamanho:</b>
                 <div class="bird-field">{{ bird.size }}</div>
@@ -80,8 +80,8 @@
             </div>
 
             <div class="btn">
-              <button (click)="showMore()">
-                {{ showFullContent ? "Leia Menos" : "Leia Mais" }}
+              <button (click)="showMore(bird)">
+                {{ bird.showContent ? "Leia menos" : "Leia mais" }}
               </button>
             </div>
           </div>

@@ -10,4 +10,5 @@ export interface Bird {
   family: string;
   habitat: string;
   picByte?: string;
+  showContent: boolean;
 }
