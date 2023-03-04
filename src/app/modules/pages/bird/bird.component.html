@@ -27,40 +27,65 @@
     </div>
     <div class="row">
       <div class="col-md-3" *ngFor="let bird of birds">
-        <a
-          class="nav-item nav-link"
-          [routerLink]="['../cadastrar/', bird.namePtbr]"
-        >
-          <div class="card">
-            <div class="card-body">
+        <div class="card">
+          <a
+            class="nav-item nav-link"
+            [routerLink]="['../cadastrar/', bird.namePtbr]"
+          >
+            <div class="image-card">
               <img [src]="bird.picByte" *ngIf="bird.imageId" />
-              <div class="bird-namePtbr">
-                {{ bird.namePtbr }}
+            </div>
+          </a>
+
+          <div class="bird-namePtbr">
+            {{ bird.namePtbr }}
+          </div>
+
+          <div class="bird-fields">
+            <div class="field">
+              <b>Nome em inglês:</b>
+              <div class="bird-field">{{ bird.nameEnglish }}</div>
+            </div>
+
+            <div class="field">
+              <b>Nome em latim:</b>
+              <div class="bird-field">{{ bird.nameLatin }}</div>
+            </div>
+
+            <div *ngIf="showFullContent">
+              <div class="field">
+                <b>Tamanho:</b>
+                <div class="bird-field">{{ bird.size }}</div>
               </div>
-              <div class="bird-nameEnglish">
-                {{ bird.nameEnglish }}
+
+              <div class="field">
+                <b>Gênero:</b>
+                <div class="bird-field">{{ bird.genre }}</div>
               </div>
-              <div class="bird-nameLatin">
-                {{ bird.namePtbr }}
+
+              <div class="field">
+                <b>Cor predominante:</b>
+                <div class="bird-field">{{ bird.color }}</div>
               </div>
-              <div class="bird-size">
-                {{ bird.size }}
+
+              <div class="field">
+                <b>Família:</b>
+                <div class="bird-field">{{ bird.family }}</div>
               </div>
-              <div class="bird-genre">
-                {{ bird.genre }}
-              </div>
-              <div class="bird-color">
-                {{ bird.color }}
-              </div>
-              <div class="bird-family">
-                {{ bird.family }}
-              </div>
-              <div class="bird-habitat">
-                {{ bird.habitat }}
+
+              <div class="field">
+                <b>Habitat:</b>
+                <div class="bird-field">{{ bird.habitat }}</div>
               </div>
             </div>
+
+            <div class="btn">
+              <button (click)="showMore()">
+                {{ showFullContent ? "Leia Menos" : "Leia Mais" }}
+              </button>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>

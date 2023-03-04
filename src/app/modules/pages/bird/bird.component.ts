@@ -1,12 +1,11 @@
 import { FileService } from './../../../services/file.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, SecurityContext } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
 import { throwError } from 'rxjs';
 import { Bird } from 'src/app/model/bird.model';
 import { BirdService } from '../../../services/bird.service';
-import { Buffer } from 'buffer';
 
 @Component({
   selector: 'app-bird',
@@ -17,6 +16,7 @@ export class BirdComponent implements OnInit {
   birds: Bird[] = [];
   birdsDisplayed: Bird[] = [];
   error: boolean = false;
+  showFullContent: boolean = false;
   imageUrl: any;
 
   constructor(
@@ -53,15 +53,16 @@ export class BirdComponent implements OnInit {
 
   listFiles() {
     this.birds.forEach((bird) => {
-      console.log("bird.imageId", bird.imageId)
+      console.log('bird.imageId', bird.imageId);
       if (bird.imageId) {
-        this.fileService
-        .download(bird.imageId)
-        .subscribe(blob =>{
-          console.log(blob)
+        this.fileService.download(bird.imageId).subscribe((blob) => {
           let objectURL = `data:${blob.contentType}/png;base64,` + blob.picByte;
 
-          bird.picByte = this.sanitizer.sanitize(SecurityContext.RESOURCE_URL, this.sanitizer.bypassSecurityTrustResourceUrl(objectURL)) || undefined;
+          bird.picByte =
+            this.sanitizer.sanitize(
+              SecurityContext.RESOURCE_URL,
+              this.sanitizer.bypassSecurityTrustResourceUrl(objectURL)
+            ) || undefined;
         });
       }
     });
@@ -74,5 +75,9 @@ export class BirdComponent implements OnInit {
     this.birds = this.birdsDisplayed.filter((bird) =>
       bird.namePtbr.toLowerCase().includes(value)
     );
+  }
+
+  showMore() {
+    this.showFullContent = !this.showFullContent;
   }
 }

@@ -14,7 +14,6 @@ export class FileService {
   private readonly API = 'api/files';
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
 
-
   download(file: string | undefined): Observable<any> {
     return this.http.get(`${this.API}/${file}`);
   }

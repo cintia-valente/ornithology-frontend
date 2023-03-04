@@ -12,15 +12,70 @@
 .card {
     transition: all 0.3s;
     color: initial;
-    height: 100%;
     border-radius: 10px;
-
-    img {
-        border-radius: 10px 10px 0px 0px;;
-    }
+    background-color: $gelo;
+    margin-bottom: 1.5rem;
     
     &:hover {
+        transform: scale(1.03);
         cursor: pointer;
         box-shadow: 3px 3px 3px 3px $primary-border-color;
+    }
+
+    .image-card {
+        height: 14rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 10px 0px 0px;
+
+            &:hover {
+                transform: scale(1.03);
+                cursor: pointer;
+                box-shadow: 3px 3px 3px 3px $primary-border-color;
+            }
+        }
+    }
+
+    .bird-namePtbr {
+        padding: 0.6rem;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.200rem;
+        font-style: italic;
+    }
+
+    .bird-fields {
+        font-size: small;
+        margin-top: 0.5rem;
+
+        .field {
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            padding: 0rem 1rem 1rem 5rem;
+
+            button {
+                font-size: small;
+                border-radius: 3px;
+            }
+        }
+
+        #plus {
+            display: none;
+        }
+    }
+
+    b {
+        padding: 0.6rem;
+    }
+
+    .bird-field {
+        padding: 0.6rem;
     }
 }
