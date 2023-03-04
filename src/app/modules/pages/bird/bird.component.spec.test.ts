@@ -16,6 +16,7 @@ import { of, throwError } from 'rxjs';
 import { BirdService } from '../../../services/bird.service';
 
 import { BirdComponent } from './bird.component';
+import { expect } from '@jest/globals';
 
 const mockBirds = [
   {
@@ -30,6 +31,7 @@ const mockBirds = [
     family: 'Psittacidae',
     habitat: 'Floresta',
     picByte: 'teste',
+    showContent: false,
   },
 ];
 
@@ -106,7 +108,7 @@ describe('BirdComponent', () => {
   });
 
   it(`Dado: que o componente foi carregado
-      Quando: atribuir um erro no serviço 
+      Quando: atribuir um erro no serviço
       Então: deve chamar o serviço birdService.getBirds`, async () => {
     //Arrange
     const errorMessage = {

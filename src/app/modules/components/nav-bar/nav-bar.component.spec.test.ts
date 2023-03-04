@@ -8,7 +8,7 @@ import { of } from 'rxjs';
 import { AuthService } from '../../../core/auth/auth.service';
 
 import { NavBarComponent } from './nav-bar.component';
-
+import { expect } from '@jest/globals';
 class AuthServiceMock {
   logout(): any {
     return of();

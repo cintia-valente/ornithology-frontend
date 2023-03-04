@@ -16,6 +16,7 @@ import { of, throwError } from 'rxjs';
 import { AnnotationService } from '../../../services/annotation.service';
 
 import { AnnotationListComponent } from './annotation-list.component';
+import { expect } from '@jest/globals';
 
 const mockAnnotations = [
   {
@@ -32,6 +33,7 @@ const mockAnnotations = [
       family: 'Psittacidae',
       habitat: 'Floresta',
       picByte: 'teste',
+      showContent: false,
     },
     date: new Date('2022-01-01T12:00:00'),
     place: 'Porto Alegre',
@@ -163,6 +165,7 @@ describe('AnnotationListComponent', () => {
         family: 'Psittacidae',
         habitat: 'Floresta',
         picByte: 'teste',
+        showContent: false,
       },
       date: new Date('2022-01-01T12:00:00'),
       place: 'Porto Alegre',

@@ -10,7 +10,10 @@ exports[`BirdComponent Dado: que o componente foi carregado
   birdsDisplayed={[Function Array]}
   error="false"
   fileService={[Function FileService]}
+  route={[Function ActivatedRoute]}
   sanitizer={[Function DomSanitizerImpl]}
+  selectedBirdName="undefined"
+  showContent="false"
   toastr={[Function ToastrServiceMock]}
 >
   <app-nav-bar /><div
@@ -65,59 +68,59 @@ exports[`BirdComponent Dado: que o componente foi carregado
         <div
           class="col-md-3"
         >
-          <a
-            class="nav-item nav-link"
-            href="/cadastrar/Arara"
+          <div
+            class="card"
           >
-            <div
-              class="card"
+            <a
+              class="nav-item nav-link"
+              href="/cadastrar/Arara"
             >
               <div
-                class="card-body"
+                class="image-card"
               >
+              </div>
+            </a>
+            <div
+              class="bird-namePtbr"
+            >
+               Arara 
+            </div>
+            <div
+              class="bird-fields"
+            >
+              <div
+                class="field"
+              >
+                <b>
+                  Nome em inglês:
+                </b>
                 <div
-                  class="bird-namePtbr"
+                  class="bird-field"
                 >
-                   Arara 
-                </div>
-                <div
-                  class="bird-nameEnglish"
-                >
-                   Blue-and-yellow Macaw 
-                </div>
-                <div
-                  class="bird-nameLatin"
-                >
-                   Arara 
-                </div>
-                <div
-                  class="bird-size"
-                >
-                   90 cm 
-                </div>
-                <div
-                  class="bird-genre"
-                >
-                   Can 
-                </div>
-                <div
-                  class="bird-color"
-                >
-                   Amarelo 
-                </div>
-                <div
-                  class="bird-family"
-                >
-                   Psittacidae 
-                </div>
-                <div
-                  class="bird-habitat"
-                >
-                   Floresta 
+                  Blue-and-yellow Macaw
                 </div>
               </div>
+              <div
+                class="field"
+              >
+                <b>
+                  Nome em latim:
+                </b>
+                <div
+                  class="bird-field"
+                >
+                  Ara ararauna
+                </div>
+              </div>
+              <div
+                class="btn"
+              >
+                <button>
+                   Leia mais 
+                </button>
+              </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </div>

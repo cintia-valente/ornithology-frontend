@@ -76,6 +76,7 @@ exports[`AnnotationListComponent Dado: que o componente foi carregado
                       class="icon-delete"
                     >
                       <img
+                        data-cy="delete"
                         src="assets/svg/layout/trash-solid.svg"
                       />
                     </span>
@@ -83,6 +84,7 @@ exports[`AnnotationListComponent Dado: que o componente foi carregado
                       class="icon-edit"
                     >
                       <a
+                        data-cy="edit"
                         href="/editar-anotacoes/138"
                       >
                         <img
