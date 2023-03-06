@@ -1,12 +1,14 @@
-import { FileService } from './../../../services/file.service';
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, SecurityContext } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+
 import { ToastrService } from 'ngx-toastr';
 import { throwError } from 'rxjs';
-import { Bird } from 'src/app/model/bird.model';
-import { BirdService } from '../../../services/bird.service';
 
+import { BirdService } from '../../../services/bird.service';
+import { FileService } from './../../../services/file.service';
+
+import { Bird } from 'src/app/model/bird.model';
 @Component({
   selector: 'app-bird',
   templateUrl: './bird.component.html',
@@ -17,7 +19,6 @@ export class BirdComponent implements OnInit {
   birdsDisplayed: Bird[] = [];
   error: boolean = false;
   showContent: boolean = false;
-  imageUrl: any;
 
   constructor(
     private birdService: BirdService,

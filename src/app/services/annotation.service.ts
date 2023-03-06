@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
+
+import { BirdService } from './bird.service';
 
 import { Annotation } from '../model/annotation.model';
-import { Observable } from 'rxjs';
-import { BirdService } from './bird.service';
 
 @Injectable({ providedIn: 'root' })
 export class AnnotationService {

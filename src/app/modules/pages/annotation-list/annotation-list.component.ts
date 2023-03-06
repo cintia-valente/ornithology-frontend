@@ -1,12 +1,14 @@
-import { Bird } from 'src/app/model/bird.model';
-import { AnnotationService } from './../../../services/annotation.service';
 import { Component } from '@angular/core';
-import { Annotation } from 'src/app/model/annotation.model';
-import { HttpErrorResponse } from '@angular/common/http';
-import { throwError } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+import { HttpErrorResponse } from '@angular/common/http';
 
+import { ToastrService } from 'ngx-toastr';
+import { throwError } from 'rxjs';
+
+import { AnnotationService } from './../../../services/annotation.service';
+
+import { Annotation } from 'src/app/model/annotation.model';
+import { Bird } from 'src/app/model/bird.model';
 @Component({
   selector: 'app-annotation-list',
   templateUrl: './annotation-list.component.html',

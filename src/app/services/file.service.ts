@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { Bird } from '../model/bird.model';
+
+import { Observable } from 'rxjs';
+
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable({ providedIn: 'root' })

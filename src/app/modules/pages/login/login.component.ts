@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
+
 import { ToastrService } from 'ngx-toastr';
 import { throwError } from 'rxjs';
+
 import { AuthService } from './../../../core/auth/auth.service';
 
 @Component({
