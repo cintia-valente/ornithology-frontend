@@ -54,7 +54,6 @@ export class BirdComponent implements OnInit {
 
   listFiles() {
     this.birds.forEach((bird) => {
-      console.log('bird.imageId', bird.imageId);
       if (bird.imageId) {
         this.fileService.download(bird.imageId).subscribe((blob) => {
           let objectURL = `data:${blob.contentType}/png;base64,` + blob.picByte;
