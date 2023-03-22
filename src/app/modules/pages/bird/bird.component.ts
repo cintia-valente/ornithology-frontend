@@ -73,7 +73,7 @@ export class BirdComponent implements OnInit {
     const value = target.value;
 
     this.birds = this.birdsDisplayed.filter((bird) =>
-      bird.namePtbr.toLowerCase().includes(value)
+      bird.namePtbr.toLowerCase().includes(value.toLowerCase())
     );
   }
 
