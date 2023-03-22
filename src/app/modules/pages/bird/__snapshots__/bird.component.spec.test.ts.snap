@@ -10,9 +10,7 @@ exports[`BirdComponent Dado: que o componente foi carregado
   birdsDisplayed={[Function Array]}
   error="false"
   fileService={[Function FileService]}
-  route={[Function ActivatedRoute]}
   sanitizer={[Function DomSanitizerImpl]}
-  selectedBirdName="undefined"
   showContent="false"
   toastr={[Function ToastrServiceMock]}
 >

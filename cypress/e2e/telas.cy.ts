@@ -20,7 +20,7 @@ describe('Validate Tests', () => {
 
     cy.get('[data-cy=submit]').click();
 
-    cy.get(':nth-child(1) > .nav-item > .card > .card-body').click();
+    cy.get(':nth-child(1) > .nav-link').click();
 
     cy.viewport(1200, 620);
   });
@@ -33,7 +33,7 @@ describe('Validate Tests', () => {
 
     cy.get('[data-cy=submit]').click();
 
-    cy.get(':nth-child(1) > .nav-item > .card > .card-body').click();
+    cy.get(':nth-child(1) > .card > .nav-item > .image-card > img').click();
 
     cy.get('select option')
       .its('length', { log: false })
