@@ -44,14 +44,6 @@ O projeto tem como objetivo permitir que pessoas ornitólogas cadastre anotaçõ
            Senha: <b>7560</b></li>
    </ul>
 </ul>
-  
-# Tecnologias utilizadas
-<ul>
-  <li><b>Frontend:</b> Angular</li>
-  <li><b>Autenticação:</b> JWT</li>
-  <li><b>Testes unitários:</b> Jest</li>
-  <li><b>Testes end-to-end:</b> Cypress</li>
-</ul>
 
 ## Testes unitários
 
@@ -64,3 +56,11 @@ O projeto tem como objetivo permitir que pessoas ornitólogas cadastre anotaçõ
 <ul>  
   <li>Em um terminal, abra o cypress, executando o comando <b>npx cypress open</b>, escolha o tipo <b>E2E Testing</b>, escolha o navegador, e na nova tela que abrir, clique em <b>telas.cy.ts</b>.</li>
 </ul>  
+
+# Tecnologias utilizadas
+<ul>
+  <li><b>Frontend:</b> Angular</li>
+  <li><b>Autenticação:</b> JWT</li>
+  <li><b>Testes unitários:</b> Jest</li>
+  <li><b>Testes end-to-end:</b> Cypress</li>
+</ul>
