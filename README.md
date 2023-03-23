@@ -31,7 +31,7 @@ O projeto tem como objetivo permitir que pessoas ornitólogas cadastre anotaçõ
 
 ## Execução
 <ul> 
-  <li>Em um terminal, instalar as dependências utilizando o comando <b>npm run install</b> e execute com o comando <b>npm run start</b>.</li>
+  <li>Em um terminal, instalar as dependências utilizando o comando <b>npm run install</b> e executar com o comando <b>npm run start</b>.</li>
    
   <li>Abra o navegador e acesse a porta <b>localhost:4200</b></li>
   
