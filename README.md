@@ -11,7 +11,7 @@
 Projeto da equipe academia da empresa DBServer. 
 O projeto tem como objetivo permitir que pessoas ornitólogas cadastre anotações, referentes a aves estudadas.
 
-# Telas
+## Telas
 <img src="https://user-images.githubusercontent.com/38113015/227041636-2094b220-c11a-4def-9cb8-8cec6c57e3dd.png" width="800"> 
 
 <img src="https://user-images.githubusercontent.com/38113015/227041812-11159729-cb76-42e2-aee0-29d0382085e2.png" width="800"> 
@@ -22,14 +22,14 @@ O projeto tem como objetivo permitir que pessoas ornitólogas cadastre anotaçõ
 
 <img src="https://user-images.githubusercontent.com/38113015/227042615-b6765356-99d1-456b-acab-0641447e4219.png" width="800"> 
 
-# Layout Responsivo
+## Layout Responsivo
 <div>
 <img src="https://user-images.githubusercontent.com/38113015/227042857-766b350d-d9d7-48fd-88d2-e817c7bb8461.png" width="250">
 <img src="https://user-images.githubusercontent.com/38113015/227042977-63389c48-e697-4cc8-a789-994d8d76cf85.png" width="250">
 <img src="https://user-images.githubusercontent.com/38113015/227043045-4c462036-d6e3-47ec-a0a5-565fab551c9c.png" width="250">
 </div>
 
-# Execução
+## Execução
 <ul> 
   <li>Em um terminal, instalar as dependências utilizando o comando <b>npm run instal</b> e execute com o comando <b>npm run start</b>.</li>
    
@@ -57,7 +57,7 @@ O projeto tem como objetivo permitir que pessoas ornitólogas cadastre anotaçõ
   <li>Em um terminal, abra o cypress, executando o comando <b>npx cypress open</b>, escolha o tipo <b>E2E Testing</b>, escolha o navegador, e na nova tela que abrir, clique em <b>telas.cy.ts</b>.</li>
 </ul>  
 
-# Tecnologias utilizadas
+## Tecnologias utilizadas
 <ul>
   <li><b>Frontend:</b> Angular</li>
   <li><b>Autenticação:</b> JWT</li>
