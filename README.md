@@ -48,7 +48,7 @@ O projeto tem como objetivo permitir que pessoas ornitólogas cadastre anotaçõ
 ## Testes unitários
 
 <ul>
-  <li>Nna IDE, clique em <b>Run and Debug</b>, e execute todos os testes clicando em <b>Start Debugging</b>.</li>
+  <li>Na IDE, clique em <b>Run and Debug</b>, e execute todos os testes clicando em <b>Start Debugging</b>.</li>
 </ul>
 
 ## Testes end-to-end
