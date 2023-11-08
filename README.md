@@ -1,6 +1,6 @@
 <div styke ="display: inline_block"<br>
   <img align="center" width="40" src="https://user-images.githubusercontent.com/38113015/123527789-b42b5f80-d6b8-11eb-8596-0274301d6753.png">
-  <img align="center" height="40" width="40" src="https://user-images.githubusercontent.com/38113015/123527751-5b5bc700-d6b8-11eb-8af3-149ceaf96f93.png">
+    <img align="center" alt="Wa-Jest" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg">
   <img align="center" width="40" src="https://user-images.githubusercontent.com/68279555/200387386-276c709f-380b-46cc-81fd-f292985927a8.png">
   <img align="center" width="40" src="https://user-images.githubusercontent.com/38113015/123527753-5e56b780-d6b8-11eb-8e15-488138f15c95.png">
   <img align="center" width="50" src="https://user-images.githubusercontent.com/38113015/123527758-61ea3e80-d6b8-11eb-8722-c185985db1d1.png">
